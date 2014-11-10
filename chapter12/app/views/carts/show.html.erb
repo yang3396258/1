@@ -1,0 +1,35 @@
+<p id="notice">
+
+<h2>自分の本棚</h2>
+	<table class="list">
+	  <tr>
+	    <th>本の名前</th>
+	    <th>著作者</th>
+	    <th>出版社</th>
+		<th>賃貸</th>
+	  </tr>
+	  <% @cart.line_items.each do |item| %> 
+	  <tr>
+	    <td align="left"><%= link_to item.book.name%></td>
+	    <td><%= item.book.full_name %></td>
+	    <td><%= item.book.publisher_name %></td>
+		
+		
+		
+		
+		
+		<td><%= button_to 'Check Out', item, :method => :delete, :confirm => 'Are you sure?'%></td>
+	  </tr>
+	  <% end %>
+	</table>
+	
+	
+
+	
+
+
+	
+
+
+ 
+

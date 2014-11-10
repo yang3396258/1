@@ -1,0 +1,58 @@
+
+
+<h1>Listing line_items</h1>
+
+<table>
+  <tr>
+	<th>Book</th>
+    <th>Cart</th>
+    <th>ss</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @line_items.each do |line_item| %>
+
+  <tr>
+    <td><%= line_item.book_id%></td>
+    <td><%= line_item.cart_id %></td>
+	
+	<td><%= line_item.book.name%></td>
+	
+    <td><%= link_to 'Show', line_item %></td>
+    <td><%= link_to 'Edit', edit_line_item_path(line_item) %></td>
+    <td><%= link_to 'Destroy', line_item, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+
+
+
+</table>
+
+
+<br />
+
+<%= link_to 'New Line item', new_line_item_path %>
+
+
+	<table class="list">
+	  <tr>
+	    <th>本の名前</th>
+	    <th>著作者</th>
+	    <th>出版社</th>
+		<th>賃貸</th>
+	  </tr>
+	  <% @line_items.each do |line_item|  %> 
+	  <tr>
+	  	<td><%= line_item.book.name%></td>
+		<td><%= line_item.book.full_name%></td>
+		<td><%= line_item.book.publisher_name%></td>
+		
+		
+		
+		
+		
+		<td><%= button_to 'Check Out', line_item, :method => :delete, :confirm => 'Are you sure?'%></td>
+	  </tr>
+	  <% end %>
+	</table>

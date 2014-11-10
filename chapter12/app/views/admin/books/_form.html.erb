@@ -1,0 +1,40 @@
+<%= render "shared/errors", obj: @book %>
+
+<table class="attr">
+  <tr>
+    <th><%= form.label :number,"Isbn番号" %></th>
+    <td><%= form.text_field :number%></td>
+  </tr>
+  <tr>
+    <th><%= form.label :name,"書名" %></th>
+    <td><%= form.text_field :name %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :full_name,"著作者" %></th>
+    <td><%= form.text_field :full_name %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :publisher_name,"出版社" %></th>   
+    <td><%= form.text_field :publisher_name %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :price,"価格" %></th>   
+	<td><%= form.text_field :price %></td>
+  </tr>
+  </tr>  
+    <th><%= form.label :place,"置いた場所" %></th>   
+	<td><%= form.text_field :place %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :kari_name,"借り者" %></th>   
+	<td><%= form.text_field :kari_name %></td>
+  </tr>  
+    <th><%= form.label :kari_place,"借り者置いた場所" %></th>   
+	<td><%= form.text_field :kari_place %></td>
+  </tr>
+  <tr>
+   <th><%= form.label :kari_email,"借り者メール" %></th>   
+   <td><%= form.text_field :kari_email %></td>
+ 
+ 
+</table>

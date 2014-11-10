@@ -1,0 +1,39 @@
+
+<table class="attr">
+  <tr>
+    <th width="150">Ibsn番号</th>
+    <td><%= @book.number %></td>
+  </tr>
+  <tr>
+    <th>書名</th>
+    <td><%= @book.name %></td>
+  </tr>
+  <tr>
+    <th>著作者</th>
+    <td><%= @book.full_name %></td>
+  </tr>
+  <tr>
+    <th>出版社</th>
+    <td><%= @book.publisher_name %></td>
+  </tr>
+  <tr>
+    <th>価格</th>
+    <td><%= @book.price %></td>
+  </tr>
+  <tr>
+    <th>借り者</th>
+    <td><%= @book.kari_name %></td>
+  </tr>
+  <tr>
+  	<th>置いた場所</th>
+	<td><%= @book.place %></td>
+  </tr> 
+  <tr>
+  	<th>借り者置いた場所</th>
+	<td><%= @book.kari_place %></td>
+  </tr>
+  <tr>
+	<th>借り者メール</th>
+    <td><%= @book.kari_email %></td>
+  </tr>
+</table>
